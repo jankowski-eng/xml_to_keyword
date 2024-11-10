@@ -3,11 +3,11 @@ defmodule XmlToKeyword.Mixfile do
 
   def project do
     [app: :xml_to_keyword,
-     version: "0.0.3",
-     elixir: "~> 1.2",
+     version: "0.0.4",
+     elixir: "~> 1.12",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps,
+     deps: deps(),
      package: [
      licenses: ["Free licenses"],
        maintainers: ["Zaali Kavelashvili", "zaali@live.com"],
@@ -23,7 +23,7 @@ defmodule XmlToKeyword.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [applications: [:logger, :xmerl]]
   end
 
   # Dependencies can be Hex packages:
